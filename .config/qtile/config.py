@@ -348,7 +348,7 @@ def init_widgets_list():
         widget.CheckUpdates(
             update_interval = 1800,
             distro = "Arch_yay",
-            display_format = "\uf01e {updates} Updates ",
+            display_format = "\uf01e  {updates} Updates ",
             foreground = colors[2],
             background = colors[0],
             mouse_callbacks ={

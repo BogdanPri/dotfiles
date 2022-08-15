@@ -410,15 +410,30 @@ def init_widgets_list():
             foreground = colors[0]
         ),
         widget.TextBox(
-            text="\uf64f",
+            text="\uf073",
             font = "MesloLGS NF",
             fontsize=18,
-            padding = 6,
+            padding = 8,
             foreground = colors[4],
             background = colors[0]
         ),
         widget.Clock(
-            format = "%a %d-%m-%Y | %I:%M %p ",
+            format = "%a %d-%m-%Y ",
+            foreground = colors[4],
+            background = colors[0],
+            font = "MesloLGS NF",
+            fontsize = 14
+        ),
+        widget.TextBox(
+            text="\uf64f",
+            font = "MesloLGS NF",
+            fontsize=18,
+            padding = 4,
+            foreground = colors[4],
+            background = colors[0]
+        ),
+        widget.Clock(
+            format = "%I:%M %p ",
             foreground = colors[4],
             background = colors[0],
             font = "MesloLGS NF",

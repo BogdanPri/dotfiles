@@ -93,6 +93,20 @@ keys = [
     Key([mod], "m", lazy.spawn(emailManager), desc="Spawns my email manager of choice"),
     Key([mod], "slash", lazy.spawn("rofi -show combi"), desc="Spawn rofi"),
     Key([mod, "shift"], "q", lazy.spawn("archlinux-logout"), desc="Spawns logout menu"),
+    # KeyChord([mod], "t", [
+    #     Key([], "t",
+    #         lazy.spawn(terminal),
+    #         desc = "Spawns my terminal of choice",
+    #     ),
+    #     Key([], "h",
+    #         lazy.spawn(f"{terminal} -e htop"),
+    #         desc = "Spawns htop in my terminal",
+    #     ),
+    #     Key([], "n",
+    #         lazy.spawn(f"{terminal} -e nvim"),
+    #         desc = "Spawns nvim in my terminal"
+    #     ),
+    # ]),
     # Layouts
     Key([mod], "space",
         lazy.window.toggle_floating(),
@@ -176,7 +190,7 @@ cursor_warp = False
 
 #################################### - Groups - #####################################
 
-groups = [
+groups = [ # Greek
     Group("\u03b1",     layout="monadtall"),
     Group("\u03b2",     layout="monadtall"),
     Group("\u03b3",     layout="monadtall"),
@@ -187,6 +201,30 @@ groups = [
     Group("\u03b8",     layout="monadtall"),
     Group("\u03b9",     layout="floating"),
 ]
+
+# groups = [ # Hebrew
+#     Group("\u05d0",     layout="monadtall"),
+#     Group("\u05d1",     layout="monadtall"),
+#     Group("\u05d2",     layout="monadtall"),
+#     Group("\u05d3",     layout="monadtall"),
+#     Group("\u05d4",     layout="monadtall"),
+#     Group("\u05d5",     layout="monadtall"),
+#     Group("\u05d6",     layout="monadtall"),
+#     Group("\u05d7",     layout="monadtall"),
+#     Group("\u05d8",     layout="floating"),
+# ]
+
+# groups = [ # Armenian
+#     Group("\u0531",     layout="monadtall"),
+#     Group("\u0532",     layout="monadtall"),
+#     Group("\u0533",     layout="monadtall"),
+#     Group("\u0534",     layout="monadtall"),
+#     Group("\u0535",     layout="monadtall"),
+#     Group("\u0536",     layout="monadtall"),
+#     Group("\u0537",     layout="monadtall"),
+#     Group("\u0538",     layout="monadtall"),
+#     Group("\u0539",     layout="floating"),
+# ]
 
 dgroups_key_binder = simple_key_binder("mod4")
 
@@ -232,6 +270,10 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='kdenlive'),       # kdenlive
     Match(wm_class='pinentry-gtk-2'), # GPG key password entry
     Match(title='Bluetooth Devices'),
+    Match(title='GIMP Message'),
+    Match(title="Gnuplot window 0"),
+    Match(title="Please choose a file"),
+    Match(title="MATLAB"),
     ],
     border_focus = "#5294e2",
     border_normal = "#2c5380",

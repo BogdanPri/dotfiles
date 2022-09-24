@@ -48,3 +48,63 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+;; all-the-icons
+(unless (package-installed-p 'all-the-icons)
+  (package! all-the-icons))
+
+;; emojify
+(unless (package-installed-p 'emojify)
+  (package! emojify))
+
+;; org-bullets
+(unless (package-installed-p 'org-bullets)
+  (package! org-bullets))
+
+;; gcmh
+(unless (package-installed-p 'gcmh)
+  (package! gcmh))
+
+;; langtool
+;; (unless (package-installed-p 'langtool)
+;;   (package! langtool))
+;; (setq langtool-java-classpath
+;;       "/usr/share/languagetool:/usr/share/java/languagetool/*")
+;; (require 'langtool)
+
+;; unicode-fonts
+(unless (package-installed-p 'unicode-fonts)
+  (package! unicode-fonts))
+
+;; arduino-mode
+(unless (package-installed-p 'arduino-mode)
+  (package! arduino-mode))
+
+;; holy-books
+(unless (package-installed-p 'holy-books)
+  (package! holy-books
+    :recipe (:host github :repo "alhassy/holy-books")))
+
+;; org-special-block-extras
+(unless (package-installed-p 'org-special-block-extras)
+  (package! org-special-block-extras
+    :recipe (:host github :repo "alhassy/org-special-block-extras")))
+
+;; Greek packages
+(unless (package-installed-p 'prettify-greek)
+  (package! prettify-greek))
+(use-package prettify-greek)
+
+(unless (package-installed-p 'greek-polytonic)
+  (package! greek-polytonic))
+(use-package greek-polytonic)
+
+(unless (package-installed-p 'mu43)
+  (package! mu4e))
+
+;; matlab
+;; (unless (package-installed-p 'Org-Mode-Matlab)
+;;   (package! Org-Mode-Matlab
+;;     :recipe (:host github :repo "tdehaeze/Org-Mode-Matlab")))
+;; (use-package Org-Mode-Matlab)
+;; (require 'matlab-load)
